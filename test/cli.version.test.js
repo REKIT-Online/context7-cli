@@ -54,7 +54,7 @@ test('the package is published under our own name, publicly', () => {
   // when someone remembers `--access public` on the command line.
   assert.equal(pkg.publishConfig?.access, 'public');
   for (const url of [pkg.homepage, pkg.bugs.url, pkg.repository.url]) {
-    assert.match(url, /github\.com\/REKIT-Online\/context7-cli/, `${url} must address our fork`);
+    assert.match(url, /github\.com\/REKIT-Online\/context7-cli(\.git|\/|#|$)/, `${url} must address our fork`);
   }
 });
 
