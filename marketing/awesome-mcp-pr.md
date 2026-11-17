@@ -10,7 +10,7 @@ Add c7 — Context7 CLI for piping library docs to terminal/LLMs
 
 ### Description
 
-Adding [c7](https://github.com/dripin-ai/context7-cli) — a CLI that pulls documentation from Context7's database and outputs it as plain text to stdout.
+Adding [c7](https://github.com/REKIT-Online/context7-cli) — a CLI that pulls documentation from Context7's database and outputs it as plain text to stdout.
 
 While Context7's MCP server works inside AI editors, c7 makes the same docs available in the terminal for piping into any LLM, script, or Unix tool.
 
@@ -22,8 +22,8 @@ c7 nextjs "app router" | grep "layout"
 
 - Zero dependencies, ~310 lines
 - Works without API key
-- npm: [@dripin-ai/context7-cli](https://www.npmjs.com/package/@dripin-ai/context7-cli)
-- Website: [dripin-ai.github.io/context7-cli](https://dripin-ai.github.io/context7-cli/)
+- npm: [@rekit-online/context7-cli](https://www.npmjs.com/package/@rekit-online/context7-cli)
+- Website: [rekit-online.github.io/context7-cli](https://rekit-online.github.io/context7-cli/)
 
 ### Category
 
@@ -32,7 +32,7 @@ This is a CLI companion to the Context7 MCP server, providing terminal access to
 ## Line to Add
 
 ```markdown
-- [c7](https://github.com/dripin-ai/context7-cli) - CLI for Context7 docs — pipe up-to-date library documentation into any LLM or terminal tool. Zero dependencies.
+- [c7](https://github.com/REKIT-Online/context7-cli) - CLI for Context7 docs — pipe up-to-date library documentation into any LLM or terminal tool. Zero dependencies.
 ```
 
 ## Submission Notes
