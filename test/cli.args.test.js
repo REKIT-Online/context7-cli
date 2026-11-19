@@ -245,8 +245,8 @@ test('--api-key without a value is a usage error', () => {
   assert.match(run.stderr, /argument missing|ambiguous/);
 });
 
-// bin/c7.js hands getDocs and resolve their topic and key as two adjacent free
-// strings; swapped, the key travels in the query to context7.com. `docs <name>`
+// getDocs(.., topic, key) and resolve(query, key) both take the key as an adjacent
+// free string; swapped, it travels in the query to context7.com. `docs <name>`
 // resolves first, so it carries the key past bin/c7.js:101 and :116 both.
 test('docs by name: the key goes in the header on both requests', () => {
   const run = runCli(['docs', 'react', 'hooks', '--api-key', 'flag-key'], {
