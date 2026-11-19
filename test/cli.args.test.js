@@ -246,6 +246,7 @@ test('--api-key without a value is a usage error', () => {
 });
 
 // bin/c7.js hands `getDocs` its topic and key as two adjacent free strings; swapped, the
+// key travels in the query to context7.com.
 test('docs: the key goes in the header and never in the URL', () => {
   const run = runCli(['docs', '/a/b', 'hooks', '--api-key', 'flag-key'], {
     stub: fetchStub([{ contentType: 'text/markdown', body: true, expectAuth: 'Bearer flag-key' }]),
