@@ -49,12 +49,12 @@ test('the package is published under our own name, publicly', () => {
   // The old name @vedanth/context7 belongs to the upstream author. Nothing in the build
   // reads pkg.name, so a bad merge or a copied package.json could hand the publish back
   // to his scope without a single test going red. This is that guard.
-  assert.equal(pkg.name, '@dripin-ai/context7-cli');
+  assert.equal(pkg.name, '@rekit-online/context7-cli');
   // A scoped package defaults to restricted. Without this field the publish only works
   // when someone remembers `--access public` on the command line.
   assert.equal(pkg.publishConfig?.access, 'public');
   for (const url of [pkg.homepage, pkg.bugs.url, pkg.repository.url]) {
-    assert.match(url, /github\.com\/dripin-ai\/context7-cli/, `${url} must address our fork`);
+    assert.match(url, /^(git\+)?https:\/\/github\.com\/REKIT-Online\/context7-cli(\.git|#readme|\/issues)?$/, `${url} must be the canonical https address of our fork`);
   }
 });
 

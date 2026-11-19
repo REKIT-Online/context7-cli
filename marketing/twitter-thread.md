@@ -14,7 +14,7 @@ Peter Steinberger (190k GitHub stars, hired by OpenAI): "mcp were a mistake. bas
 
 So I built c7 — library docs piped to stdout for any LLM. 310 lines, zero deps.
 
-github.com/dripin-ai/context7-cli
+github.com/REKIT-Online/context7-cli
 
 ---
 
@@ -55,10 +55,10 @@ No server. No config. No IDE plugin.
 
 Try it, no install needed:
 
-npx @dripin-ai/context7-cli hono "routing"
+npx @rekit-online/context7-cli hono "routing"
 
-GitHub: github.com/dripin-ai/context7-cli
-npm: npmjs.com/package/@dripin-ai/context7-cli
-Website: dripin-ai.github.io/context7-cli
+GitHub: github.com/REKIT-Online/context7-cli
+npm: npmjs.com/package/@rekit-online/context7-cli
+Website: rekit-online.github.io/context7-cli
 
 #webdev #ai #cli #opensource

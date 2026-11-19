@@ -47,13 +47,13 @@ Zero dependencies, pure Node.js, ~310 lines. No API key required for basic usage
 **Install:**
 
 ```bash
-npx @dripin-ai/context7-cli vue "composition api"   # Zero install, runs immediately
-npm install -g @dripin-ai/context7-cli               # Or install globally
+npx @rekit-online/context7-cli vue "composition api"   # Zero install, runs immediately
+npm install -g @rekit-online/context7-cli               # Or install globally
 ```
 
-- GitHub: https://github.com/dripin-ai/context7-cli
-- npm: https://www.npmjs.com/package/@dripin-ai/context7-cli
-- Landing page: https://dripin-ai.github.io/context7-cli/
+- GitHub: https://github.com/REKIT-Online/context7-cli
+- npm: https://www.npmjs.com/package/@rekit-online/context7-cli
+- Landing page: https://rekit-online.github.io/context7-cli/
 - Author: https://akarispeed.xyz
 
 If you're running local models with tight context windows, the difference between 13.7k tokens of MCP overhead and 0 tokens of CLI overhead is the difference between fitting the docs in context or not.
