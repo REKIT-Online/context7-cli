@@ -245,19 +245,9 @@ test('--api-key without a value is a usage error', () => {
   assert.match(run.stderr, /argument missing|ambiguous/);
 });
 
-// bin/c7.js hands `getDocs` its topic and key as two adjacent free strings; swapped, the
-// key travels in the query to context7.com.
-test('docs: the key goes in the header and never in the URL', () => {
-  const run = runCli(['docs', '/a/b', 'hooks', '--api-key', 'flag-key'], {
-    stub: fetchStub([{ contentType: 'text/markdown', body: true, expectAuth: 'Bearer flag-key' }]),
-  });
-  assertNoLiveRequest(run);
-  assert.equal(run.code, 0);
-  assert.match(run.stdout, /topic=hooks/);
-  assert.doesNotMatch(run.stdout, /flag-key/);
-});
-
-// `docs <name>` resolves first, so the key passes through bin/c7.js:101 as well.
+// bin/c7.js hands getDocs and resolve their topic and key as two adjacent free
+// strings; swapped, the key travels in the query to context7.com. `docs <name>`
+// resolves first, so it carries the key past bin/c7.js:101 and :116 both.
 test('docs by name: the key goes in the header on both requests', () => {
   const run = runCli(['docs', 'react', 'hooks', '--api-key', 'flag-key'], {
     stub: fetchStub([
